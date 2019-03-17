@@ -8,11 +8,25 @@
 		<body>
 			<h1>Help me choose between...</h1>
 			<div class="inputSection">
-				<div>
+				<div class="inputs">
 					<input placeholder="Something"></input>
 				</div>
 				<button class= "addOption">Add</button>
 			</div>
+			<div class="resultSection"></div>
 			<button>Go!</button>
+
+			<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+			<script>
+				$(function() { 
+					$('.resultSection').hide()
+
+					var add_option = function() {
+						$('.inputs').append('<input></input>')
+					}
+
+					$('.addOption').click(add_option)
+					})
+				</script>
 		</body>
 </html>
